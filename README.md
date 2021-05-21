@@ -1,19 +1,38 @@
-# Chat-App-Kafka
-A Realtime Chat Application with help of Kafka as Message Broker and React as Frontend Framework
+# Chat Application
+A Realtime Chat Application
 
-# Before Running the Project
+>Kafka as MessageBroker
+>React as FrontEnd Framework
 
-1 Start Zookeeper
->>zookeeper-server-start .\config\zookeeper.properties
 
-2 Start Kafka
->>kafka-server-start .\config\server.properties
 
-3 Create a Topic
->>kafka-topics --create --topic kafka-chat --zookeeper localhost:2181 --replication-factor 1 --partitions 1
 
-4 Start Backend
->>run main method as Spring or Java Application
+## Before Running the Project 
 
-5 Start Frontend
->>npm start
+>*Start Zookeeper*
+```shell script
+zookeeper-server-start .\config\zookeeper.properties
+```
+
+>*Start Kafka*
+```shell script
+kafka-server-start .\config\server.properties
+```
+
+>*Create a Topic*
+```
+kafka-topics --create --topic kafka-chat --zookeeper localhost:2181 --replication-factor 1 --partitions 1
+```
+
+>*Start Backend*
+```
+mvn spring-boot:run
+```
+
+*Start Frontend*
+```
+npm start
+```
+
+
+
