@@ -1,4 +1,4 @@
-# Chat Application
+### Chat Application
 A Realtime Chat Application
 
 >Kafka as MessageBroker
