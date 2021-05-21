@@ -1,4 +1,4 @@
-package com.shubh.kafkachat.constants;
+package com.kafkachat.constants;
 
 public class KafkaConstants {
 	    public static final String KAFKA_TOPIC = "kafka-chat";

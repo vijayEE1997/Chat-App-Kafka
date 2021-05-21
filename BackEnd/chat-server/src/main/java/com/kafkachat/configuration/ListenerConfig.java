@@ -1,11 +1,12 @@
-package com.shubh.kafkachat.configuration;
+package com.kafkachat.configuration;
 
-import com.shubh.kafkachat.constants.KafkaConstants;
-import com.shubh.kafkachat.model.Message;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
+
+import com.kafkachat.constants.KafkaConstants;
+import com.kafkachat.model.Message;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

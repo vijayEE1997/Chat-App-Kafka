@@ -5,27 +5,23 @@ import Input from './components/Input/Input';
 import LoginForm from './components/LoginForm';
 import Messages from './components/Messages/Messages';
 import chatAPI from './services/chatapi';
-import { randomColor } from './utils/common';
 
 
-const SOCKET_URL = 'http://localhost:8080/ws-chat/';
+const SOCKET_URL = 'http://localhost:8080/dhakad-app/';
 
 const App = () => {
   const [messages, setMessages] = useState([])
   const [user, setUser] = useState(null)
 
-  let onConnected = () => {
-    console.log("Connected!!")
-  }
-
   let onMessageReceived = (msg) => {
-    console.log('New Message Received!!', msg);
+    console.log('New Message Received!!');
     setMessages(messages.concat(msg));
   }
 
   let onSendMessage = (msgText) => {
+      console.log('Sending...');
     chatAPI.sendMessage(user.username, msgText).then(res => {
-      console.log('Sent', res);
+      console.log('Sent...');
     }).catch(err => {
       console.log('Error Occured while sending message to api');
     })
@@ -35,22 +31,21 @@ const App = () => {
     console.log(username, " Logged in..");
 
     setUser({
-      username: username,
-      color: randomColor()
+      username: username
     })
 
   }
 
   return (
     <div className="App">
-      {!!user ?
+      {user ?
         (
           <>
             <SockJsClient
               url={SOCKET_URL}
               topics={['/topic/group']}
-              onConnect={onConnected}
-              onDisconnect={console.log("Disconnected!")}
+              onConnect={console.log("Connected!!!")}
+              onDisconnect={console.log("Disconnected!!!")}
               onMessage={msg => onMessageReceived(msg)}
               debug={false}
             />

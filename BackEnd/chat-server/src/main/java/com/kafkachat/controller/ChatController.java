@@ -1,7 +1,5 @@
-package com.shubh.kafkachat.controller;
+package com.kafkachat.controller;
 
-import com.shubh.kafkachat.constants.KafkaConstants;
-import com.shubh.kafkachat.model.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -9,6 +7,9 @@ import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.web.bind.annotation.*;
+
+import com.kafkachat.constants.KafkaConstants;
+import com.kafkachat.model.Message;
 
 import java.time.LocalDateTime;
 import java.util.concurrent.ExecutionException;

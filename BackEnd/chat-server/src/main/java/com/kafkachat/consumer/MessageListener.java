@@ -1,11 +1,12 @@
-package com.shubh.kafkachat.consumer;
+package com.kafkachat.consumer;
 
-import com.shubh.kafkachat.constants.KafkaConstants;
-import com.shubh.kafkachat.model.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Component;
+
+import com.kafkachat.constants.KafkaConstants;
+import com.kafkachat.model.Message;
 
 @Component
 public class MessageListener {

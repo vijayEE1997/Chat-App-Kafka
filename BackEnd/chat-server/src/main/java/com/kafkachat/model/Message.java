@@ -1,4 +1,4 @@
-package com.shubh.kafkachat.model;
+package com.kafkachat.model;
 
 public class Message {
     private String sender;

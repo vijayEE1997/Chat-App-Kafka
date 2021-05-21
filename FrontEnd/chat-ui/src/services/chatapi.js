@@ -5,10 +5,10 @@ const api = Axios.create({
 });
 
 const chatAPI = {
-    getMessages: (groupId) => {
-        console.log('Calling get messages from API');
-        return api.get(`messages/${groupId}`);
-    },
+    // getMessages: (groupId) => {
+    //     console.log('Calling get messages from API');
+    //     return api.get(`messages/${groupId}`);
+    // },
 
     sendMessage: (username, text) => {
         let msg = {
