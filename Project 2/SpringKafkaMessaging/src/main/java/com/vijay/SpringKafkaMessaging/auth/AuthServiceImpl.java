@@ -5,12 +5,14 @@ import org.springframework.stereotype.Service;
 
 import com.vijay.SpringKafkaMessaging.cache.repository.CacheRepository;
 import com.vijay.SpringKafkaMessaging.persistence.model.AccessToken;
+import com.vijay.SpringKafkaMessaging.persistence.model.User;
 import com.vijay.SpringKafkaMessaging.persistence.repository.AccessTokenRepository;
+import com.vijay.SpringKafkaMessaging.persistence.repository.UserRepository;
 
 import java.util.Calendar;
 
 @Service
-public class AuthRepositoryImpl implements AuthRepository {
+public class AuthServiceImpl implements AuthService {
 
     @Autowired
     CacheRepository cacheRepository;
@@ -18,6 +20,9 @@ public class AuthRepositoryImpl implements AuthRepository {
     @Autowired
     AccessTokenRepository accessTokenRepository;
 
+    @Autowired
+    UserRepository userRepository;
+    
     @Override
     public void putAccessToken(String token, Long userId) {
 
@@ -30,8 +35,18 @@ public class AuthRepositoryImpl implements AuthRepository {
         accessTokenRepository.save(accessToken);
     }
 
-    @Override
-    public void loginWithAccessToken(String mobile, String code) {
-        // TODO
-    }
+	@Override
+	public Long loginWithAccessToken(String accessToken) {
+	    String userIdStr = cacheRepository.getUserIdByAccessToken(accessToken);
+	    if (userIdStr == null) {
+	      User user = userRepository.findByToken(accessToken);
+	      if (user != null)
+	        return user.getUserId();
+	      else
+	        return 0L;
+	    }
+	    return Long.valueOf(userIdStr);
+	}
+
+
 }

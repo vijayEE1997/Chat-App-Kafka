@@ -9,16 +9,16 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ActivationRequest {
+public class LoginResponse {
+	
+	private String accessToken;
 
-    private String mobile;
-
-	public String getMobile() {
-		return mobile;
+	public String getAccessToken() {
+		return accessToken;
 	}
 
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
+	public void setAccessToken(String accessToken) {
+		this.accessToken = accessToken;
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.vijay.SpringKafkaMessaging.websocket;
+package com.vijay.SpringKafkaMessaging.message.broker;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
