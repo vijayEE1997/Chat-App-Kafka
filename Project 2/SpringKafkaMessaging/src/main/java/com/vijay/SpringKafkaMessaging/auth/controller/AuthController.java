@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.vijay.SpringKafkaMessaging.auth.AuthRepository;
-import com.vijay.SpringKafkaMessaging.persistence.repository.CacheRepository;
+import com.vijay.SpringKafkaMessaging.cache.repository.CacheRepository;
 import com.vijay.SpringKafkaMessaging.persistence.repository.UserRepository;
 
 @RestController

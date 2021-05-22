@@ -9,8 +9,8 @@ import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
+import com.vijay.SpringKafkaMessaging.cache.repository.CacheRepository;
 import com.vijay.SpringKafkaMessaging.persistence.model.User;
-import com.vijay.SpringKafkaMessaging.persistence.repository.CacheRepository;
 import com.vijay.SpringKafkaMessaging.persistence.repository.UserRepository;
 
 @Component

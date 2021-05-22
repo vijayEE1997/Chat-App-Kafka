@@ -1,8 +1,7 @@
-package com.vijay.SpringKafkaMessaging.service;
+package com.vijay.SpringKafkaMessaging.cache.repository;
 import org.springframework.stereotype.Service;
 
 import com.vijay.SpringKafkaMessaging.cache.JedisFactory;
-import com.vijay.SpringKafkaMessaging.persistence.repository.CacheRepository;
 
 import redis.clients.jedis.Jedis;
 

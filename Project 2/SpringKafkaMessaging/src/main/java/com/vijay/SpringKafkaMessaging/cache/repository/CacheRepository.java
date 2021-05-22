@@ -1,4 +1,4 @@
-package com.vijay.SpringKafkaMessaging.persistence.repository;
+package com.vijay.SpringKafkaMessaging.cache.repository;
 
 
 public interface CacheRepository {

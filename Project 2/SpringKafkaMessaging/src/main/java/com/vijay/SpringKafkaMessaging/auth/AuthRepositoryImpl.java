@@ -3,9 +3,9 @@ package com.vijay.SpringKafkaMessaging.auth;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.vijay.SpringKafkaMessaging.cache.repository.CacheRepository;
 import com.vijay.SpringKafkaMessaging.persistence.model.AccessToken;
 import com.vijay.SpringKafkaMessaging.persistence.repository.AccessTokenRepository;
-import com.vijay.SpringKafkaMessaging.persistence.repository.CacheRepository;
 
 import java.util.Calendar;
 
